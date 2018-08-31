@@ -1,3 +1,65 @@
+<?php
+
+require_once 'phpmailer/PHPMailerAutoload.php';
+
+$config = require_once 'config/config.php';
+
+$hasNameError = false;
+$hasEmailError = false;
+$hasMessageError = false;
+
+$senderName = '';
+$senderEmail = '';
+$message = '';
+
+if (count($_POST)) {
+    $senderName = isset($_POST['name']) ? stripslashes(trim($_POST['name'])) : '';
+    $senderEmail = isset($_POST['email']) ? stripslashes(trim($_POST['email'])) : '';
+    $message = isset($_POST['message']) ? stripslashes(trim($_POST['message'])) : '';
+
+    if (strlen($senderName) < 1) {
+        $hasNameError = true;
+    }
+    if (strlen($senderEmail) < 1 || !filter_var($senderEmail, FILTER_VALIDATE_EMAIL)) {
+        $hasEmailError = true;
+    }
+    if (strlen($message) < 1) {
+        $hasMessageError = true;
+    }
+
+    if (!$hasNameError && !$hasEmailError && !$hasMessageError) {
+        $mail = new PHPMailer;
+
+        $mail->CharSet = 'UTF-8';
+        $mail->isSMTP();
+        $mail->Host = $config['host'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $config['username'];
+        $mail->Password = $config['password'];
+        $mail->SMTPSecure = $config['security'];
+        $mail->Port = $config['port'];
+
+        $mail->setFrom($config['sendFrom'], '[ContactForm]');
+        $mail->addAddress($config['sendTo'], '');
+        $mail->addReplyTo($senderEmail, $senderName);
+
+        $mail->isHTML(true);
+
+        $mail->Subject = '[ContactForm] Wiadomość z formularza kontaktowego';
+        $mail->Body = '<p>' . $message . '</p>';
+
+        if(!$mail->send()) {
+            die($mail->ErrorInfo);
+        } else {
+            header('Location: ' . $config['thankYouPage']);
+            exit;
+        }
+    }
+
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -78,7 +140,9 @@
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
 				 aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="navbar-nav ml-auto">
@@ -136,12 +200,12 @@
 							<i class="fas fa-map-marker-alt color-txt"></i>Łódź, Poland
 						</li>
 						<li class="list-group-item">
-							<a href="" target="_blank">
+							<a href="http://github.com/natalia-migas" target="_blank">
 								<i class="fab fa-github color-txt"></i>Github
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a href="" target="_blank">
+							<a href="https://www.linkedin.com/in/natalia-migas-9483a3b0/" target="_blank">
 								<i class="fab fa-linkedin color-txt"></i>Linkedin
 							</a>
 						</li>
@@ -467,12 +531,73 @@
 		</div>
 	</section>
 	<section class="contact" id="contact">
+		<div class="text-center">
+			<h2 class="heading">Contact</h2>
+		</div>
 		<div class="container">
-			<div class="row">
-
+			<div class="row contact-wrapper">
+				<div class="col-12 col-sm-6 col-xl-5">
+					<?php if (isset($_GET['status']) && $_GET['status'] === 'OK'): ?> Message sent
+					<?php else: ?>
+					<form class="form-horizontal" method="POST">
+						<div class="form-group">
+							<label for="contact-form--name" class="sr-only">Name:</label>
+							<input type="text" class="form-control" name="name" id="contact-form--name" placeholder="Your name..." value="<?= $senderName; ?>">
+							<?php if ($hasNameError): ?>
+							<div class="form-error">
+								Name is Required.
+							</div>
+							<?php endif; ?>
+						</div>
+						<div class="form-group">
+							<label for="contact-form--email" class="sr-only">E-mail:</label>
+							<input type="email" class="form-control" name="email" id="contact-form--email" placeholder="Your e-mail address..." value="<?= $senderEmail; ?>">
+							<?php if ($hasEmailError): ?>
+							<div class="form-error">
+								Invalid e-mail address.
+							</div>
+							<?php endif; ?>
+						</div>
+						<div class="form-group">
+							<label for="contact-form--message" class="sr-only">Message:</label>
+							<textarea class="form-control" name="message" id="contact-form--message" rows="11" placeholder="Message..."><?= $message; ?></textarea>
+							<?php if ($hasMessageError): ?>
+							<div class="form-error">
+								Message is required.
+							</div>
+							<?php endif; ?>
+						</div>
+						<div class="form-group text-center">
+							<button type="submit" class="btn btn-main">Send</button>
+						</div>
+					</form>
+					<?php endif; ?>
+				</div>
+				<div class="col-lg-2 d-none d-xl-block"></div>
+				<div class="col-12 col-sm-6 col-xl-5">
+					<ul>
+						<li>
+							<a href="mailto:kontakt@webdevnatalia.com">
+								<i class="fas fa-envelope color-txt"></i>kontakt@webdevnatalia.com</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/natalia-migas-9483a3b0/" target="_blank">
+								<i class="fab fa-linkedin color-txt"></i>Linkedin
+								</i>
+							</a>
+						</li>
+						<li>
+							<a href="http://github.com/natalia-migas" target="_blank">
+								<i class="fab fa-github-square color-txt"></i>Github</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
+	<footer class="footer">
+		<p class="text-center">Natalia Migas 2018 &copy; All rights reserved.</p>
+	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	 crossorigin="anonymous"></script>
