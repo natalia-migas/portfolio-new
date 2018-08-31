@@ -21,13 +21,13 @@
 
 <body>
 
-	<header class="header" id="header">
+	<header class="header msg-sent" id="header">
 		<div class="hero">
 			<div class="container">
 				<h1 class="text-center">Message was sent</h1>
 				<h2 class="text-center">I will contact you as soon as I can!</h2>
 				<div class="text-center">
-					<a href="http://webdevnatalia.com/" class="btn btn-main scrollable">Back to Homepage</a>
+					<a href="http://webdevnatalia.com/" class="btn btn-main">Back to Homepage</a>
 				</div>
 			</div>
 			<span class="circle one d-none d-xl-block"></span>

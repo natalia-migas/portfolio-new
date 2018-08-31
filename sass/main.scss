@@ -137,6 +137,9 @@ input[type='submit'] {
   @media (max-width: 991px) {
     min-height: 100vh;
   }
+  &.msg-sent {
+    min-height: 100vh;
+  }
 }
 
 .navbar {
@@ -990,4 +993,6 @@ input[type='submit'] {
   color: #fff;
   margin-top: -40px;
   font-family: $font2;
+  position: relative;
+  z-index: 99;
 }

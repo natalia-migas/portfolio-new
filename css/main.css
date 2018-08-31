@@ -115,6 +115,8 @@ input[type='submit'] {
   @media (max-width: 991px) {
     .header {
       min-height: 100vh; } }
+  .header.msg-sent {
+    min-height: 100vh; }
 
 .navbar {
   padding: 1.5rem 1rem;
@@ -893,4 +895,6 @@ input[type='submit'] {
   background-color: transparent;
   color: #fff;
   margin-top: -40px;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  z-index: 99; }
