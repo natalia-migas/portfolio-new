@@ -134,6 +134,7 @@ input[type='submit'] {
   background-size: cover;
   min-height: 110vh;
   position: relative;
+  overflow-y: hidden;
   @media (max-width: 991px) {
     min-height: 100vh;
   }

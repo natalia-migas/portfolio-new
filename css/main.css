@@ -111,7 +111,8 @@ input[type='submit'] {
   background: url(../img/bg/abstract2.jpg) no-repeat bottom;
   background-size: cover;
   min-height: 110vh;
-  position: relative; }
+  position: relative;
+  overflow-y: hidden; }
   @media (max-width: 991px) {
     .header {
       min-height: 100vh; } }
