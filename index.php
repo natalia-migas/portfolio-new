@@ -532,7 +532,7 @@ if (count($_POST)) {
 					<form class="form-horizontal" method="POST">
 						<div class="form-group">
 							<label for="contact-form--name" class="sr-only">Name:</label>
-							<input type="text" class="form-control" name="name" id="contact-form--name" placeholder="Your name..." value="<?= $senderName; ?>">
+							<input type="text" class="form-control" name="name" id="contact-form--name" placeholder="Your name..." value="<?= $senderName; ?>" required>
 							<?php if ($hasNameError): ?>
 							<div class="form-error">
 								Name is Required.
@@ -541,7 +541,7 @@ if (count($_POST)) {
 						</div>
 						<div class="form-group">
 							<label for="contact-form--email" class="sr-only">E-mail:</label>
-							<input type="email" class="form-control" name="email" id="contact-form--email" placeholder="Your e-mail address..." value="<?= $senderEmail; ?>">
+							<input type="email" class="form-control" name="email" id="contact-form--email" placeholder="Your e-mail address..." value="<?= $senderEmail; ?>" required>
 							<?php if ($hasEmailError): ?>
 							<div class="form-error">
 								Invalid e-mail address.
@@ -550,7 +550,7 @@ if (count($_POST)) {
 						</div>
 						<div class="form-group">
 							<label for="contact-form--message" class="sr-only">Message:</label>
-							<textarea class="form-control" name="message" id="contact-form--message" rows="11" placeholder="Message..."><?= $message; ?></textarea>
+							<textarea class="form-control" name="message" id="contact-form--message" rows="11" placeholder="Message..." required><?= $message; ?></textarea>
 							<?php if ($hasMessageError): ?>
 							<div class="form-error">
 								Message is required.
