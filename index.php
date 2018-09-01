@@ -214,21 +214,11 @@ if (count($_POST)) {
 			</div>
 			<div class="row about-text">
 				<div class="col-md-10 m-auto">
-					<p>Mam na imię Natalia, urodziłam się w Krakowie i przeprowadziłam się do Łodzi pod koniec 2016 roku. Ukończyłam studia
-						magisterskie na kierunku politologia ze spec. marketing polityczny.</p>
-					<p>Programowaniem zainteresowałam się podczas pisania mojej pracy magisterskiej o marketingu internetowym gdy poruszyłam
-						zagadnienie pozycjonowania stron internetowych. Zaraz po obronie zajęłam się samodzielną nauką programowania i pokochałam
-						to!
-						<i class="fas fa-heart"></i>
-					</p>
-					<p>Po ok. roku intensywnej nauki znalazłam pracę jako frontend developer. Zajmowałam się tworzeniem stron internetowych
-						w HTML, CSS (Sass), JavaScript (głównie jQuery), Bootstrap, a następnie stawianiem stron na WordPressie.</p>
-					<p>Po jakimś czasie uznałam, że chciałabym brać udział w większych projektach i skupić się głównie na JavaScripcie oraz
-						nauczyć się Reacta z Reduxem. Po 9 miesiącach zrezygnowałam z pracy i od czerwca skupiłam się na samodzielnej nauce
-						JS, React + Redux, a teraz szukam pracy z tym związanej.</p>
-					<p>W czasie wolnym lubię jeździć na rowerze, chodzić na basen, grać w gry komputerowe oraz konsolowe, oglądać seriale i
-						gotować. Jestem osobą pogodną, otwartą, pracowitą, uczciwą, kocham zwierzęta, a moim marzeniem jest zwiedzenie większości
-						Europy oraz Ameryki Północnej i Południowej.</p>
+					<p>My name is Natalia, I was born in Kraków and I moved to Łódź at the end of 2016. I graduated from master's studies political science with specialization political marketing.</p>
+					<p>I became interested in programming during writing my master thesis about internet marketing when I raised the issue of websites positioning. Right after my master's defense I started my self-study of programming and I loved it! <i class="fas fa-heart"></i></p>
+					<p>After about a year of intense learning I found a job as fronted developer. I was creating websites in: HTML, CSS (Sass), JavaScript (mostly jQuery), Bootstrap, and I set up this websites on WordPress.</p>
+					<p>After a while I decided that I would like to participate in bigger projects and focus mostly on JavaScript and learn React with Redux. I quit my job and from June I focused on self-study of JS, React + Redux, and now I'm looking for a job related to this.</p>
+					<p>In my free time I like to ride a bike, go to the swimming pool, play computer (and xbox) games, watch netflix/showmax and cook. I am cheerful, open, hardworking, honest person, I love animals, and my biggest dream is to travel accross most of Europe, South and West America.</p>
 				</div>
 			</div>
 		</div>
@@ -290,9 +280,9 @@ if (count($_POST)) {
 					<p>
 						<strong>Technologies:</strong> git (basics), npm (basics), Microsoft Office, Corel Photopaint, GIMP, Slack, ActiveCollab</p>
 					<p>
-						<strong>Other:</strong> Prawo jazdy kat. B, umiejętność samodzielnej nauki, szybkiego uczenia się, organizacji czasu, komunikatywność</p>
+						<strong>Other:</strong> Driving license cat. B, skill of self-study, fast-learning, time organization, communication</p>
 					<h4>
-						<strong>Language</strong>
+						<strong>Languages</strong>
 					</h4>
 					<table class="table table-hover table-responsive">
 						<thead>
