@@ -40,6 +40,66 @@ input[type='submit'] {
   }
 }
 
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  height: 100%;
+  background: rgb(22, 0, 19);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(22, 0, 19, 1) 0%,
+    rgba(88, 21, 94, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(22, 0, 19, 1) 0%,
+    rgba(88, 21, 94, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(22, 0, 19, 1) 0%,
+    rgba(88, 21, 94, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#160013', endColorstr='#58155e',GradientType=1 );
+  width: 100%;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .btn-main {
   color: #fff;
   border: 0;
@@ -134,7 +194,7 @@ input[type='submit'] {
   background-size: cover;
   min-height: 110vh;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
   @media (max-width: 991px) {
     min-height: 100vh;
   }

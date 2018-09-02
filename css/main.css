@@ -41,6 +41,69 @@ input[type='submit'] {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  background: #160013;
+  background: -moz-linear-gradient(-45deg, #160013 0%, #58155e 100%);
+  background: -webkit-linear-gradient(-45deg, #160013 0%, #58155e 100%);
+  background: -webkit-linear-gradient(315deg, #160013 0%, #58155e 100%);
+  background: -o-linear-gradient(315deg, #160013 0%, #58155e 100%);
+  background: linear-gradient(135deg, #160013 0%, #58155e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#160013', endColorstr='#58155e',GradientType=1 );
+  width: 100%;
+  z-index: 9999;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .lds-ring div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent; }
+  .lds-ring div:nth-child(1) {
+    -webkit-animation-delay: -0.45s;
+    animation-delay: -0.45s; }
+  .lds-ring div:nth-child(2) {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s; }
+  .lds-ring div:nth-child(3) {
+    -webkit-animation-delay: -0.15s;
+    animation-delay: -0.15s; }
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 .btn-main {
   color: #fff;
   border: 0;
@@ -112,7 +175,7 @@ input[type='submit'] {
   background-size: cover;
   min-height: 110vh;
   position: relative;
-  overflow-y: hidden; }
+  overflow: hidden; }
   @media (max-width: 991px) {
     .header {
       min-height: 100vh; } }
