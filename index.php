@@ -429,7 +429,7 @@ if (count($_POST)) {
 									<img src="img/portfolio/portfolio12.jpg" class="img-fluid site-img" alt="site screenshot">
 									<div class="mask">
 										<p>My old portfolio</p>
-										<a href="" target="_blank">
+										<a href="http://webdevnatalia.com/portfolio-old/" target="_blank">
 											<i class="fas fa-eye"></i>
 										</a>
 									</div>
