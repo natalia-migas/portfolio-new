@@ -61,7 +61,7 @@ if (count($_POST)) {
 
 ?>
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -574,7 +574,6 @@ if (count($_POST)) {
 						<li>
 							<a href="https://www.linkedin.com/in/natalia-migas-9483a3b0/" target="_blank">
 								<i class="fab fa-linkedin color-txt"></i>Linkedin
-								</i>
 							</a>
 						</li>
 						<li>
