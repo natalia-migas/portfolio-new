@@ -219,7 +219,7 @@ if (count($_POST)) {
 					<p>I became interested in programming during writing my master thesis about internet marketing when I raised the issue of websites positioning. Right after my master's defense I started my self-study of programming and I loved it! <i class="fas fa-heart"></i></p>
 					<p>After about a year of intense learning I found a job as frontend developer. I was creating websites in: HTML, CSS (Sass), JavaScript (mostly jQuery), Bootstrap, and I set up these websites on WordPress.</p>
 					<p>After a while I decided that I would like to participate in bigger projects and focus mostly on JavaScript and learn React with Redux. I quit my job and from June I focused on self-study of JS, React + Redux, and now I'm looking for a job related to this.</p>
-					<p>In my free time I like to ride a bike, go to the swimming pool, play computer (and xbox) games, watch netflix/showmax and cook. I am cheerful, open, hardworking, honest person, I love animals, and my biggest dream is to travel accross most of Europe, South and West America.</p>
+					<p>In my free time I like to ride a bike, go to the swimming pool, play computer (and xbox) games, watch netflix/showmax and cook. I am cheerful, open, hardworking, honest person, I love animals, and my biggest dream is to travel accross most of Europe, North and South America.</p>
 				</div>
 			</div>
 		</div>
