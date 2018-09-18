@@ -67,7 +67,7 @@ if (count($_POST)) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>WebDev Natalia – Fronted Developer with React + Redux</title>
+	<title>WebDev Natalia – Frontend Developer with React + Redux</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
@@ -440,6 +440,18 @@ if (count($_POST)) {
 					<div class="tab-pane fade" id="apps" role="tabpanel" aria-labelledby="apps-tab">
 						<div class="row">
 							<div class="col-sm-6">
+							<div class="img-wrapper">
+									<img src="img/portfolio/portfolio15.jpg" class="img-fluid site-img" alt="site screenshot">
+									<div class="mask">
+										<p>React + Redux + Firebase App - Shopping Cart</p>
+										<a href="http://webdevnatalia.com/shopping-cart/" target="_blank">
+											<i class="fas fa-eye"></i>
+										</a>
+										<a href="https://github.com/natalia-migas/shopping-cart" target="_blank">
+											<i class="fab fa-github"></i>
+										</a>
+									</div>
+								</div>
 								<div class="img-wrapper">
 									<img src="img/portfolio/portfolio13.jpg" class="img-fluid site-img" alt="site screenshot">
 									<div class="mask">
