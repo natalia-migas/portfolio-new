@@ -1,6 +1,5 @@
 $(window).load(function() {
   var $loading = $('#loadingDiv');
-  var $content = $('siteWrapper');
   $loading.hide();
 });
 
