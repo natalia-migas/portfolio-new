@@ -1,23 +1,10 @@
-var $loading = $('#loadingDiv').hide();
-$(document)
-  .ajaxStart(function() {
-    $loading.show();
-  })
-  .ajaxStop(function() {
-    $loading.hide();
-  });
+$(window).load(function() {
+  var $loading = $('#loadingDiv');
+  var $content = $('siteWrapper');
+  $loading.hide();
+});
 
-// jQuery.ajaxSetup({
-//   beforeSend: function() {
-//     $loading.show();
-//   },
-//   complete: function(){
-//     $loading.hide();
-//   },
-//   success: function() {}
-// });
-
-jQuery(document).ready(function($) {
+$(document).ready(function() {
   $('.scrollable').click(function(e) {
     e.preventDefault();
     var target = $(this).attr('href');

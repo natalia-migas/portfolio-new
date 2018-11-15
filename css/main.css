@@ -42,10 +42,8 @@ input[type='submit'] {
     box-shadow: none; }
 
 .lds-ring {
-  display: inline-block;
-  position: relative;
+  position: fixed;
   width: 64px;
-  height: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
