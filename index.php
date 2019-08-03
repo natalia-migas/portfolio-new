@@ -373,6 +373,15 @@ if (count($_POST)) {
 						<div class="row">
 							<div class="col-sm-6">
 								<div class="img-wrapper">
+									<img src="img/portfolio/portfolio16.jpg" class="img-fluid site-img" alt="site screenshot">
+									<div class="mask">
+										<p>Przejazdy Taxvend</p>
+										<a href="http://taxvend.pl/" target="_blank">
+											<i class="fas fa-eye"></i>
+										</a>
+									</div>
+								</div>
+								<div class="img-wrapper">
 									<img src="img/portfolio/portfolio8.jpg" class="img-fluid site-img" alt="site screenshot">
 									<div class="mask">
 										<p>Car service DAWO</p>
@@ -544,6 +553,7 @@ if (count($_POST)) {
 					<?php else: ?>
 					<form class="form-horizontal" method="POST">
 						<div class="form-group">
+						<h2>The contact form is disabled because of a lot of spam.</h2>
 							<label for="contact-form--name" class="sr-only">Name:</label>
 							<input type="text" class="form-control" name="name" id="contact-form--name" placeholder="Your name..." value="<?= $senderName; ?>" required>
 							<?php if ($hasNameError): ?>
@@ -571,7 +581,7 @@ if (count($_POST)) {
 							<?php endif; ?>
 						</div>
 						<div class="form-group text-center">
-							<button type="submit" class="btn btn-main">Send</button>
+							<button type="submit" class="btn btn-main" disabled>Send</button>
 						</div>
 					</form>
 					<?php endif; ?>
