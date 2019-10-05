@@ -661,16 +661,28 @@ input[type='submit'] {
     font-size: 25px;
     font-family: "Raleway", sans-serif;
     margin-top: 50px; }
-  .skills .progress {
-    background-color: rgba(255, 255, 255, 0.5); }
-  .skills .progress-bar {
-    background: #ff2100;
-    background: -moz-linear-gradient(-45deg, red 0%, #ff0177 100%);
-    background: -webkit-linear-gradient(-45deg, red 0%, #ff0177 100%);
-    background: -webkit-linear-gradient(315deg, red 0%, #ff0177 100%);
-    background: -o-linear-gradient(315deg, red 0%, #ff0177 100%);
-    background: linear-gradient(135deg, red 0%, #ff0177 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2100', endColorstr='#ff00e9',GradientType=1 ); }
+  .skills .skills-list {
+    padding-left: 120px; }
+    .skills .skills-list li {
+      font-size: 16;
+      letter-spacing: 1.3px;
+      padding: 8px 0px;
+      list-style-type: none;
+      position: relative; }
+      .skills .skills-list li:before {
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        content: '\f14a';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        font-size: 20px;
+        background: -webkit-linear-gradient(-45deg, red 0%, #ff00b3 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
   @media (max-width: 991px) {
     .skills .addit-wrapper {
       margin-top: 50px; } }
